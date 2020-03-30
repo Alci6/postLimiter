@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title></title>
+  </head>
+  <body>
+    <!-- Llamada a los scripts -->
+    <script src="mainscripts.js"></script>
+    <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <nav>
+      <div class="nav-wrapper #455a64 blue-grey darken-2">
+        <div class="container">
+        <div class="row s6">
+        <a href="#" class="brand-logo center align"> <span style="font-family:Roboto">ultimate awesome post limiter</span></a>
+        </div>
+      </div>
+    </div>
+    </nav>
+
+<!-- Campo para añadir texto   -->
+<form>
+  <div class="container">
+        <div class="row">
+          <p></p>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">mode_edit</i>
+            <textarea id="inputText" placeholder="let's start writing!" class="materialize-textarea" maxlength="9999" data-length="9999"></textarea>
+            <!-- <label for="icon_prefix2">let's start writing!</label> -->
+            </div>
+
+<!-- Botón de copiar -->
+            <div class="center align">
+              <a onclick="copyF()" class="waves-effect waves-light btn"><i class="material-icons left">content_copy</i>copy</a>
+            </div>
+
+        </div>
+      </div>
+    </form>
+
+<!-- Botón Opciones -->
+
+<div class="fixed-action-btn">
+  <a class="sidenav-trigger btn-floating btn-large teal waves-effect waves-light btn" data-target="opcionesCustom">
+    <i class="large material-icons">settings</i>
+  </a>
+</div>
+
+<!-- SideNav -->
+
+<ul id="opcionesCustom" class="sidenav">
+
+<!-- close button   -->
+  <div class="col s12">
+<a class="waves-effect waves-light right align btn-flat  sidenav-close"><i class="medium material-icons ">close</i></a>
+
+
+  <li><div class="user-view">
+
+
+<!-- Linkedin -->
+  </div></li>
+  <li><a href="https://es.linkedin.com/in/alcibiadesc"  target="_blank" class="center align">Made with ❤️by <em>@alcibiades</em></a></li>
+  <li><div class="divider"></div></li>
+
+<!-- Range -->
+
+  <li>
+    <div class="container">
+        <div class="input-field col s6">
+          <form>
+            <input onchange="maxT()" placeholder="limit character" id="characterLimit" type="number" class="validate">
+
+          </form>
+        </div>
+      </div>
+    </li>
+
+
+<!-- On/Off limiter -->
+<li>
+  <div class="container">
+    <div class="switch center align">
+      <label>
+        Restricted Writing
+        <input onclick="maxSwitch()" type="checkbox" id="limiterBtn">
+        <span class="lever"></span>
+
+      </label>
+    </div>
+  </div>
+</li>
+
+
+  <!-- Set Button -->
+  <li>
+    <div class="container center align">
+      <div class="col s12">
+        <form>
+        <a onclick="maxT()" class="waves-effect waves-light btn">Set!<i class="material-icons right">send</i></a>
+        </form>
+      </div>
+
+    </div>
+  </li>
+
+<!-- Opciones Redes Sociales -->
+<li>
+  <div class="container">
+        <form>
+            <p>
+              <label>
+                <input name="socialNetName" type="radio" value="280" onclick="radioLimit(this.value)"/><span>Twitter (280)</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="socialNetName" type="radio" value="2200" onclick="radioLimit(this.value)"/><span>Facebook (2.200)</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="socialNetName" type="radio" value="3000" onclick="radioLimit(this.value)"/><span>Linkedin (3.000)</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="socialNetName" type="radio" value="4096" onclick="radioLimit(this.value)"/><span>Telegram (4.096)</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="socialNetName" type="radio" value="63206" onclick="radioLimit(this.value)"/><span>Whatsapp (63.206)</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="socialNetName" type="radio" value="65536" onclick="radioLimit(this.value)"/><span>Facebook (65.536)</span>
+              </label>
+            </p>
+        </form>
+  </div>
+</li>
+</ul>
+  </body>
+</html>
